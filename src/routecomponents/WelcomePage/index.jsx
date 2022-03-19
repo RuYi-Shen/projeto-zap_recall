@@ -1,18 +1,32 @@
-import logo from '../../assets/logo.png'
+import logo from '../../assets/logo.png';
+import React from 'react';
+import { availableDecks } from '../../Decks';
 
-export default function WelcomePage({setStart}){
+export default function WelcomePage({setStart, setMyDeck}){
+    const [deck, setDeck] = React.useState("");
+    const deckNames = availableDecks();
+    function verifyDeck(){
+        if (deck == ""){
+            alert("Escolha um deck ~(^-^)~");
+        }
+        else {
+            setMyDeck(deck);
+            setStart(true);
+        }
+    }
+    function handleChange(event) {
+        setDeck(event.target.value);
+    }
     return (
         <main className="welcome-page">
             <img src={logo} />
             <h1>ZapRecall</h1>
-            <select placeholder="Selecione seu deck">
+            <select value={deck} onChange={handleChange} placeholder="Selecione seu deck">
                 <option value="">Escolha seu deck</option>
-                <option value="React">React</option>
-                <option value="JavaScript">Javascript</option>
-                <option value="DRIVEN">DRIVEN</option>
+                {deckNames.map((deckName)=><option value={deckName}>{deckName}</option>)}
             </select>
             
-            <button onClick={()=>setStart(true)}>Iniciar Recall!</button>
+            <button onClick={verifyDeck}>Iniciar Recall!</button>
         </main>
     )
 }

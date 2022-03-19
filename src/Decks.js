@@ -14,11 +14,12 @@ const decks = [
 ]
 
 export default function getDeck(deckName){
-    const askedDeck = [];
+    let askedDeck = [];
     decks.forEach((deck) => {if (deckName == deck.name) askedDeck = deck.cards});
-    return askedDeck;
+    if (askedDeck == []) alert("Não existe o deck solicitado");
+    else return askedDeck;
 }
 
-export default function availableDecks(){
+export function availableDecks(){
     return decks.map((deck) => {return deck.name});
 }

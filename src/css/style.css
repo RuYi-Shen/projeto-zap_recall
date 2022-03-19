@@ -106,9 +106,12 @@ header {
     align-items: center;
     justify-content: center;
 
+    background-color: #FB6B6B;
+
     position: fixed;
     top: 0;
     left: 0;
+    z-index: -1;
 }
 
 header img {
@@ -148,6 +151,7 @@ header h1 {
     justify-content: space-between;
 
     padding: 0 15px;
+    margin-bottom: 25px;
     position: relative;
 
     transition: all 0.5s;
@@ -243,6 +247,7 @@ footer {
     position: fixed;
     bottom: 0;
     left: 0;
+    z-index: 1;
 }
 
 footer p {
