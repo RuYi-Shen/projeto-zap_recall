@@ -12,7 +12,7 @@ body {
 
 /******************************** Welcome Page ********************************/
 
-.welcome-page{
+.welcome-page {
     width: 100vw;
     height: 100vh;
 
@@ -22,7 +22,7 @@ body {
     justify-content: center;
 }
 
-.welcome-page img{
+.welcome-page img {
     width: 136px;
     height: 161px;
 }
@@ -67,29 +67,38 @@ body {
 /******************************** Main Page ********************************/
 .main-page {
     width: 100vw;
-    height: 100vh;
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+
+    margin-top: 150px;
+    margin-bottom: 90px;
 }
 
 
 /*********************** Header ***********************/
 
 header {
+    width: 100vw;
+    height: 150px;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
-header img{
+header img {
     width: 52px;
     height: 60px;
 }
 
-header h1{
+header h1 {
     width: 203.17px;
     height: 44px;
 
@@ -108,7 +117,7 @@ header h1{
 
 /*********************** Flashcard ***********************/
 
-.flashcard{
+.flashcard {
     width: 300px;
     height: 65px;
 
@@ -119,9 +128,14 @@ header h1{
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    padding: 0 15px;
+    position: relative;
+
+    transition: all 0.5s;
 }
 
-.flashcard p{
+.flashcard p {
     font-family: 'Recursive';
     font-style: normal;
     font-weight: 700;
@@ -131,9 +145,68 @@ header h1{
     color: #333333;
 }
 
-.flashcard img{
+.flashcard img {
     width: 20px;
     height: 23px;
+}
+
+/**************** Flashcard Front ****************/
+
+.flashcard.front {
+    width: 299px;
+    height: 131px;
+
+    background: #FFFFD5;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+}
+
+.flashcard.front p {
+    font-family: 'Recursive';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+
+    margin-top: 18px;
+
+    color: #333333;
+}
+
+.flashcard.front img{
+    position: absolute;
+    bottom: 6px;
+    right: 15px;
+}
+
+/**************** Flashcard Back ****************/
+
+.flashcard.back {
+    width: 299px;
+    height: 131px;
+
+    background: #FFFFD5;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+}
+
+.flashcard.back p {
+    font-family: 'Recursive';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+
+    margin-top: 18px;
+
+    color: #333333;
+}
+
+.flashcard.back button {
+    width: 85.17px;
+    height: 37.17px;
+
+    border-radius: 5px;
 }
 
 /*********************** Footer ***********************/
@@ -154,7 +227,7 @@ footer {
     left: 0;
 }
 
-footer p{
+footer p {
     font-family: 'Recursive';
     font-style: normal;
     font-weight: 400;

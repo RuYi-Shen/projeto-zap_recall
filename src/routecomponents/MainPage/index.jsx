@@ -4,7 +4,7 @@ import Footer from '../../components/Footer'
 
 export default function MainPage(){
     return (
-        <main className="mainPage">
+        <main className="main-page">
             <Header />
             <Flashcard />
             <Footer />
