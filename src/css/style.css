@@ -45,6 +45,24 @@ body {
     color: #FFFFFF;
 }
 
+.welcome-page select {
+    width: 246px;
+    height: 43px;
+
+    background: #FFFFFF;
+    border-radius: 5px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+
+    margin-bottom: 18px;
+
+    color: #ADADAD;
+}
+
 .welcome-page button {
     width: 246px;
     height: 54px;
