@@ -21,6 +21,14 @@ export default function Flashcard({index, content}) {
 
         <div className="flashcard">
             <div className="face front">
+                <div className="cardSize">
+                    <p>{answer}</p>
+                    <div className="buttons">
+                        <button className="red">Não lembrei!</button>
+                        <button className="yellow">Quase não lembrei!</button>
+                        <button className="green">Zap!</button>
+                    </div>
+                </div>
                 <p>{question}</p>
                 <img src={setinha} alt="setinha" onClick={()=>turnCard(index)} />
             </div> 

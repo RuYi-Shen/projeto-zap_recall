@@ -9,7 +9,7 @@ export default function MainPage({myDeck}){
         <main className="main-page">
             <Header />
             {deck.map((card,index)=><Flashcard index={index} content={card} key={index}/>)}
-            <Footer />
+            <Footer cardNumber={deck.length}/>
         </main>
     )
 }
