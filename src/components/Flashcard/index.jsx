@@ -26,7 +26,11 @@ export default function Flashcard({index, content}) {
             </div> 
             <div className="face back">
                 <p>{answer}</p>
-                <img src={setinha} alt="setinha" />
+                <div className="buttons">
+                    <button className="red">Não lembrei!</button>
+                    <button className="yellow">Quase não lembrei!</button>
+                    <button className="green">Zap!</button>
+                </div>
             </div>
         </div>
     );
