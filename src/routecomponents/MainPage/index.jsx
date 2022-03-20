@@ -8,7 +8,7 @@ export default function MainPage({myDeck}){
     return (
         <main className="main-page">
             <Header />
-            {deck.map((card,index)=><Flashcard index={index} content={card}/>)}
+            {deck.map((card,index)=><Flashcard index={index} content={card} key={index}/>)}
             <Footer />
         </main>
     )

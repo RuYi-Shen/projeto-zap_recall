@@ -15,8 +15,8 @@ const decks = [
 
 export default function getDeck(deckName){
     let askedDeck = [];
-    decks.forEach((deck) => {if (deckName == deck.name) askedDeck = deck.cards});
-    if (askedDeck == []) alert("Não existe o deck solicitado");
+    decks.forEach((deck) => {if (deckName === deck.name) askedDeck = deck.cards});
+    if (askedDeck === []) alert("Não existe o deck solicitado");
     else return askedDeck;
 }
 

@@ -6,7 +6,7 @@ export default function WelcomePage({setStart, setMyDeck}){
     const [deck, setDeck] = React.useState("");
     const deckNames = availableDecks();
     function verifyDeck(){
-        if (deck == ""){
+        if (deck === ""){
             alert("Escolha um deck ~(^-^)~");
         }
         else {
@@ -19,11 +19,11 @@ export default function WelcomePage({setStart, setMyDeck}){
     }
     return (
         <main className="welcome-page">
-            <img src={logo} />
+            <img src={logo} alt="logo"/>
             <h1>ZapRecall</h1>
             <select value={deck} onChange={handleChange} placeholder="Selecione seu deck">
                 <option value="">Escolha seu deck</option>
-                {deckNames.map((deckName)=><option value={deckName}>{deckName}</option>)}
+                {deckNames.map((deckName)=><option value={deckName} key={deckName}>{deckName}</option>)}
             </select>
             
             <button onClick={verifyDeck}>Iniciar Recall!</button>
