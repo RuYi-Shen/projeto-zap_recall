@@ -6,8 +6,8 @@ export default function Flashcard({index, content}) {
     const {Q:question, R:answer} = content;
     const [cardOpen, setCardOpen] = React.useState(false);
     function turnCard(index) {
-        document.querySelectorAll(".front.face")[index].style.transform = "rotateY(-180deg)";
-        document.querySelectorAll(".back.face")[index].style.transform = "rotateY(0deg)";
+        document.querySelectorAll(".flashcard")[index].querySelector(".front.face").style.transform = "rotateY(-180deg)";
+        document.querySelectorAll(".flashcard")[index].querySelector(".back.face").style.transform = "rotateY(0deg)";
     }
 
     return ( 
