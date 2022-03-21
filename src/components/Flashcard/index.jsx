@@ -1,23 +1,45 @@
 import setinha from '../../assets/setinha.png';
 import seta from '../../assets/seta.png';
+import red from '../../assets/red.png';
+import green from '../../assets/green.png';
+import yellow from '../../assets/yellow.png';
 import React from 'react';
 
-export default function Flashcard({index, content}) {
+export default function Flashcard({index, content, doneCards, totalCards, setDoneCards, setAllGood, setAllDone}) {
     const {Q:question, R:answer} = content;
     const [cardOpen, setCardOpen] = React.useState(false);
+    const [cardColor,setCardColor]= React.useState("seta");
     function turnCard(index) {
         document.querySelectorAll(".flashcard")[index].querySelector(".front.face").style.transform = "rotateY(-180deg)";
         document.querySelectorAll(".flashcard")[index].querySelector(".back.face").style.transform = "rotateY(0deg)";
     }
 
-    return ( 
-        !cardOpen ?
+    function processAnswer(color,index){
+        setDoneCards([...doneCards,(color)]);
+        setCardColor(color);
+        setCardOpen(false);
+        setTimeout(()=>{document.querySelectorAll(".flashcard")[index].querySelector(".list").style.transform = "rotateY(0deg)"},10); 
+        if(doneCards.length >= totalCards-1) setAllDone(true);
+    }
+
+    function Color(){
+        if (cardColor === "red") return <img src={red} alt={cardColor} />;
+        else if (cardColor === "green") return <img src={green} alt={cardColor} />;
+        else if (cardColor === "yellow") return <img src={yellow} alt={cardColor} />;
+        return <img src={seta} alt={cardColor} onClick={()=>setCardOpen(true)} />;
+    }
+
+    return (  
+        !cardOpen ? 
+
         <div className="flashcard">
-            <div className="list">
+            <div className={`list ${cardColor}`}>
                 <p>Pergunta {index+1}</p>
-                <img src={seta} alt="seta" onClick={()=>setCardOpen(true)}/>
-            </div>
-        </div> : 
+                <Color />
+            </div>      
+        </div> 
+        
+        : 
 
         <div className="flashcard">
             <div className="face front">
@@ -35,9 +57,9 @@ export default function Flashcard({index, content}) {
             <div className="face back">
                 <p>{answer}</p>
                 <div className="buttons">
-                    <button className="red">Não lembrei!</button>
-                    <button className="yellow">Quase não lembrei!</button>
-                    <button className="green">Zap!</button>
+                    <button className="red" onClick={()=>{processAnswer("red",index); setAllGood(false)}}>Não lembrei!</button>
+                    <button className="yellow" onClick={()=>{processAnswer("yellow",index)}}>Quase não lembrei!</button>
+                    <button className="green" onClick={()=>{processAnswer("green",index)}}>Zap!</button>
                 </div>
             </div>
         </div>

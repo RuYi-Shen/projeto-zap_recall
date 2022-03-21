@@ -92,7 +92,7 @@ body {
     justify-content: space-between;
 
     margin-top: 150px;
-    margin-bottom: 90px;
+    margin-bottom: 70px;
 }
 
 
@@ -143,8 +143,6 @@ header h1 {
 
     margin-bottom: 25px;
     position: relative;
-
-    transition: height 0.5s;
 }
 
 .flashcard .list {
@@ -178,9 +176,9 @@ header h1 {
 }
 
 .face {
-    padding: 1px 15px;
+    padding: 18px 15px;
     padding-bottom: 6px;
-    
+
     backface-visibility: hidden;
     transition: all .5s;
     transform-style: preserve-3d;
@@ -196,7 +194,7 @@ header h1 {
     border-radius: 5px;
 }
 
-.flashcard .front > p {
+.flashcard .front>p {
     width: calc(100% - 30px);
 
     font-family: 'Recursive';
@@ -206,7 +204,7 @@ header h1 {
     line-height: 22px;
 
     position: absolute;
-    top: 0;
+    top: 18px;
     left: 15px;
 
     color: #333333;
@@ -238,17 +236,19 @@ header h1 {
     transform: rotateY(180deg);
 }
 
-.flashcard  p {
+.flashcard .face p {
     font-family: 'Recursive';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 22px;
 
+    margin-bottom: 26px;
+
     color: #333333;
 }
 
-.flashcard .buttons{
+.flashcard .buttons {
     display: flex;
     justify-content: space-between;
 }
@@ -273,21 +273,38 @@ header h1 {
     color: #FFFFFF;
 }
 
-.red {
+.list.red p {
+    color: #FF3030;
+    text-decoration: line-through;
+}
+
+.list.yellow p {
+    color: #FF922E;
+    text-decoration: line-through;
+}
+
+.list.green p {
+    color: #2FBE34;
+    text-decoration: line-through;
+}
+
+button.red {
     background-color: #FF3030;
 }
 
-.yellow{
+button.yellow {
     background-color: #FF922E;
 }
 
-.green {
+button.green {
     background-color: #2FBE34;
 }
+
 /*********************** Footer ***********************/
 
 footer {
     width: 100vw;
+    min-height: 70px;
 
     background: #FFFFFF;
     box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
@@ -304,6 +321,7 @@ footer {
 }
 
 footer p {
+
     font-family: 'Recursive';
     font-style: normal;
     font-weight: 400;
@@ -311,4 +329,58 @@ footer p {
     line-height: 22px;
 
     color: #333333;
+}
+
+footer img {
+    width: 23px;
+    height: 23px;
+
+    margin: 0 2.5px;
+    margin-top: 5px;
+}
+
+footer .feedback {
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    justify-content: space-between;
+
+    margin: 15px;
+}
+
+footer .feedback img{
+    margin-right: 12px;
+}
+
+footer .message {
+    width: 222px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    margin-bottom: 15px;
+}
+
+footer button {
+    width: 167px;
+    height: 32px;
+
+    background: #FB6B6B;
+    border-radius: 5px;
+
+    font-family: 'Recursive';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    margin: 21px 0;
+
+    color: #FFFFFF;
 }
