@@ -175,6 +175,21 @@ header h1 {
     height: 23px;
 }
 
+.list.red p {
+    color: #FF3030;
+    text-decoration: line-through;
+}
+
+.list.yellow p {
+    color: #FF922E;
+    text-decoration: line-through;
+}
+
+.list.green p {
+    color: #2FBE34;
+    text-decoration: line-through;
+}
+
 .face {
     padding: 18px 15px;
     padding-bottom: 6px;
@@ -216,7 +231,7 @@ header h1 {
     right: 15px;
 }
 
-.cardSize {
+.flashcard .front .cardSize {
     visibility: hidden;
 }
 
@@ -271,21 +286,6 @@ header h1 {
     text-align: center;
 
     color: #FFFFFF;
-}
-
-.list.red p {
-    color: #FF3030;
-    text-decoration: line-through;
-}
-
-.list.yellow p {
-    color: #FF922E;
-    text-decoration: line-through;
-}
-
-.list.green p {
-    color: #2FBE34;
-    text-decoration: line-through;
 }
 
 button.red {

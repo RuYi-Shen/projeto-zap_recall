@@ -12,24 +12,6 @@ const decks = [
         { Q: "Usamos estado (state) para __", R: "dizer para o React quais informações quando atualizadas devem renderizar a tela novamente" }
     ]},
     { 
-    name: "Chinese",
-    cards: [
-        { Q: "的", R: "de - (possessive particle), of / really and truly / aim, clear" },
-        { Q: "一", R: "yi - one / single / a(n)" }, 
-        { Q: "是", R: "shì - is, are, am, yes to be" },
-        { Q: "不", R: "	bù - (negative prefix) no, not" },
-        { Q: "上", R: "shàng - above, on, over, top, (go) up, last, previous" },
-        { Q: "人", R: "rén - man, person, people" },
-        { Q: "我", R: "wǒ I, me, myself" },
-        { Q: "有", R: "yǒu- to have, there is, there are, to exist, to be" },
-        { Q: "他", R: "	tā - he, him" },
-        { Q: "这", R: "	zhè	- this/ these" },
-        { Q: "大", R: "dà - big, huge, large, major, great, wide, deep, oldest, eldest / doctor" },
-        { Q: "来", R: "lái - to come" },
-        { Q: "中", R: "zhōng - within, among, in, middle, center, while (doing something), during" },
-        { Q: "在", R: "zài - (located) at, in, exist" }
-    ]},
-    { 
     name: "DRIVEN",
     cards: [
         { Q: "O que é a formação Driven?", R: "A Driven é uma formação em Desenvolvimento Full Stack" },
@@ -40,6 +22,37 @@ const decks = [
         { Q: "Como funciona o processo seletivo?", R: "Inscrição -> Desafio -> Etapa Comportamental -> Matrículas" },
         { Q: "O que é necessário para participar das aulas?", R: "Acesso a uma internet, Computador, Webcam, Headset" },
         { Q: "Em que momento do curso vou ser avaliado(a)?", R: "As avaliações são feitas diariamente através das entregas dos projetos ou exercícios." }
+    ]},
+    { 
+    name: "Chinese",
+    cards: [
+        { Q: "的", R: "de - (possessive particle), of / really and truly / aim, clear" },
+        { Q: "一", R: "yi - one / single / a(n)" }, 
+        { Q: "是", R: "shì - is, are, am, yes to be" },
+        { Q: "不", R: "bù - (negative prefix) no, not" },
+        { Q: "上", R: "shàng - above, on, over, top, (go) up, last, previous" },
+        { Q: "人", R: "rén - man, person, people" },
+        { Q: "我", R: "wǒ I, me, myself" },
+        { Q: "有", R: "yǒu- to have, there is, there are, to exist, to be" },
+        { Q: "他", R: "tā - he, him" },
+        { Q: "这", R: "zhè	- this/ these" },
+        { Q: "大", R: "dà - big, huge, large, major, great, wide, deep, oldest, eldest / doctor" },
+        { Q: "来", R: "lái - to come" },
+        { Q: "中", R: "zhōng - within, among, in, middle, center, while (doing something), during" },
+        { Q: "在", R: "zài - (located) at, in, exist" }
+    ]},
+    {
+    name: "Korean",
+    cards: [
+        { Q: "Hello ", R: "안녕하세요 (annyeonghaseyo)" },
+        { Q: "Please ", R: "주세요 (juseyo)" }, 
+        { Q: "Sorry ", R: "죄송합니다 (joesonghamnida)" },
+        { Q: "Thank you ", R: "고맙습니다 (gomapseumnida)" },
+        { Q: "Yes ", R: "네 (ne)" },
+        { Q: "No ", R: "아니요 (aniyo)" },
+        { Q: "Maybe ", R: "아마도 (amado)" },
+        { Q: "Help ", R: "도와 주세요 (dowa juseyo)" },
+        { Q: "Excuse me ", R: "저기요 (jeogiyo)" }
     ]}
 ]
 
