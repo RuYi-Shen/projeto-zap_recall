@@ -1,6 +1,7 @@
 import React from 'react';
 import './css/normalize.css';
 import './css/style.css';
+import './css/desktop-style.css'
 import WelcomePage from './routecomponents/WelcomePage';
 import MainPage from './routecomponents/MainPage';
 
