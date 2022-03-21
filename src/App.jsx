@@ -1,9 +1,10 @@
 import React from 'react';
+import MainPage from './routecomponents/MainPage';
+import WelcomePage from './routecomponents/WelcomePage';
+
 import './css/normalize.css';
 import './css/style.css';
-import './css/desktop-style.css'
-import WelcomePage from './routecomponents/WelcomePage';
-import MainPage from './routecomponents/MainPage';
+import './css/desktop-style.css';
 
 export default function App(){
     const [start, setStart] = React.useState(false);

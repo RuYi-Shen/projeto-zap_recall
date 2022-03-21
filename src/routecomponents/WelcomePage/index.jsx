@@ -1,10 +1,11 @@
-import logo from '../../assets/logo.png';
 import React from 'react';
+import logo from '../../assets/logo.png';
 import { availableDecks } from '../../Decks';
 
 export default function WelcomePage({setStart, setMyDeck}){
     const [deck, setDeck] = React.useState("");
     const deckNames = availableDecks();
+
     function verifyDeck(){
         if (deck === ""){
             alert("Escolha um deck ~(^-^)~");
@@ -14,9 +15,11 @@ export default function WelcomePage({setStart, setMyDeck}){
             setStart(true);
         }
     }
+
     function handleChange(event) {
         setDeck(event.target.value);
     }
+
     return (
         <main className="welcome-page">
             <img src={logo} alt="logo"/>
@@ -25,7 +28,6 @@ export default function WelcomePage({setStart, setMyDeck}){
                 <option value="">Escolha seu deck</option>
                 {deckNames.map((deckName)=><option value={deckName} key={deckName}>{deckName}</option>)}
             </select>
-            
             <button onClick={verifyDeck}>Iniciar Recall!</button>
         </main>
     )
