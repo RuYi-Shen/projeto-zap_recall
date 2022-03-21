@@ -1,14 +1,15 @@
-import setinha from '../../assets/setinha.png';
-import seta from '../../assets/seta.png';
+import React from 'react';
 import red from '../../assets/red.png';
+import seta from '../../assets/seta.png';
 import green from '../../assets/green.png';
 import yellow from '../../assets/yellow.png';
-import React from 'react';
+import setinha from '../../assets/setinha.png';
 
 export default function Flashcard({index, content, doneCards, totalCards, setDoneCards, setAllGood, setAllDone}) {
-    const {Q:question, R:answer} = content;
     const [cardOpen, setCardOpen] = React.useState(false);
     const [cardColor,setCardColor]= React.useState("seta");
+    const {Q:question, R:answer} = content;
+
     function turnCard(index) {
         document.querySelectorAll(".flashcard")[index].querySelector(".front.face").style.transform = "rotateY(-180deg)";
         document.querySelectorAll(".flashcard")[index].querySelector(".back.face").style.transform = "rotateY(0deg)";
@@ -31,16 +32,13 @@ export default function Flashcard({index, content, doneCards, totalCards, setDon
 
     return (  
         !cardOpen ? 
-
         <div className="flashcard">
             <div className={`list ${cardColor}`}>
                 <p>Pergunta {index+1}</p>
                 <Color />
             </div>      
         </div> 
-        
         : 
-
         <div className="flashcard">
             <div className="face front">
                 <div className="cardSize">

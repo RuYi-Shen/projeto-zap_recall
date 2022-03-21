@@ -1,9 +1,9 @@
+import React from 'react'
 import red from '../../assets/red.png'
-import yellow from '../../assets/yellow.png'
+import sad from '../../assets/sad.png'
 import green from '../../assets/green.png'
 import party from '../../assets/party.png'
-import sad from '../../assets/sad.png'
-import React from 'react'
+import yellow from '../../assets/yellow.png'
 
 export default function Footer({doneCards, totalCards, allGood, allDone}) {
 
